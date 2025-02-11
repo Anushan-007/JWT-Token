@@ -6,5 +6,6 @@ namespace LoginSystemManagement.IRepository
     {
         Task<User> UserRegister(User user);
          Task<User> GetUserName(string username);
+        Task<List<User>> GetAllUsers();
     }
 }

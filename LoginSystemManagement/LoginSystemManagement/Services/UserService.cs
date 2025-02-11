@@ -87,5 +87,16 @@ namespace LoginSystemManagement.Services
         }
 
 
+        public async Task<List<UserResponse>> GetAllUsers()
+        {
+            var users = await _userRepository.GetAllUsers();
+            return users.Select(u => new UserResponse
+            {
+                Id = u.Id,
+                Name = u.Name
+            }).ToList();
+        }
+
+
     }
 }

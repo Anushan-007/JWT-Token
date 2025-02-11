@@ -140,3 +140,4 @@ C:\Users\User\Desktop\Login System\LoginSystemManagement\LoginSystemManagement\o
 C:\Users\User\Desktop\Login System\LoginSystemManagement\LoginSystemManagement\obj\Debug\net8.0\LoginSystemManagement.genruntimeconfig.cache
 C:\Users\User\Desktop\Login System\LoginSystemManagement\LoginSystemManagement\obj\Debug\net8.0\ref\LoginSystemManagement.dll
 C:\Users\User\Desktop\Login System\LoginSystemManagement\LoginSystemManagement\bin\Debug\net8.0\BCrypt.Net.dll
+C:\Users\User\Desktop\Login System\LoginSystemManagement\LoginSystemManagement\obj\Debug\net8.0\LoginSystemManagement.sourcelink.json

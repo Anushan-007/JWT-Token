@@ -7,5 +7,6 @@ namespace LoginSystemManagement.IServices
     {
         Task<UserResponse> UserRegister(UserRequest userRequest);
         Task<LoginResponse> UserLogin(LoginRequest loginRequest);
+        Task<List<UserResponse>> GetAllUsers();
     }
 }

@@ -26,5 +26,11 @@ namespace LoginSystemManagement.Repository
             var data = await _context.Users.FirstOrDefaultAsync(u => u.Name == username); 
             return data;
         }
+
+        public async Task<List<User>> GetAllUsers()
+        {
+            var data = await _context.Users.ToListAsync();
+            return data;
+        }
     }
 }
