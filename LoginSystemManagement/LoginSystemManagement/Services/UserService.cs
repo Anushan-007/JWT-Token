@@ -27,6 +27,7 @@ namespace LoginSystemManagement.Services
             {
                 Name = userRequest.Name,
                 Password = BCrypt.Net.BCrypt.HashPassword(userRequest.Password),
+                UserRole = userRequest.UserRole
             };
         
             var data = await _userRepository.UserRegister(users);
@@ -35,7 +36,8 @@ namespace LoginSystemManagement.Services
             {
                 Id= users.Id,
                 Name = users.Name,
-               
+                UserRole = users.UserRole
+
             };
             return response;
         }
@@ -67,6 +69,7 @@ namespace LoginSystemManagement.Services
             var claimlist = new List<Claim>();
             claimlist.Add(new Claim("Name", user.Name));
             claimlist.Add(new Claim("Password", user.Password));
+            claimlist.Add(new Claim("UserRole", user.UserRole.ToString()));
 
             var Key = _configuration["Jwt:Key"];
             var secKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Key));
@@ -93,7 +96,8 @@ namespace LoginSystemManagement.Services
             return users.Select(u => new UserResponse
             {
                 Id = u.Id,
-                Name = u.Name
+                Name = u.Name,
+                UserRole = u.UserRole
             }).ToList();
         }
 

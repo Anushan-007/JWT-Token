@@ -40,5 +40,84 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoginSystemManagement.Controllers.UserTaskController",
+    "Method": "AddTask",
+    "RelativePath": "api/UserTask/AddTask",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taskRequest",
+        "Type": "LoginSystemManagement.DTOs.Request.UserTaskRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoginSystemManagement.Controllers.UserTaskController",
+    "Method": "DeleteTask",
+    "RelativePath": "api/UserTask/DeleteTask/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoginSystemManagement.Controllers.UserTaskController",
+    "Method": "GetAllTasks",
+    "RelativePath": "api/UserTask/GetAllTasks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoginSystemManagement.Controllers.UserTaskController",
+    "Method": "GetTaskById",
+    "RelativePath": "api/UserTask/GetTaskById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoginSystemManagement.Controllers.UserTaskController",
+    "Method": "UpdateTask",
+    "RelativePath": "api/UserTask/UpdateTask",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserTaskId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "taskRequest",
+        "Type": "LoginSystemManagement.DTOs.Request.UserTaskRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
