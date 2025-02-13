@@ -1,4 +1,5 @@
-﻿using LoginSystemManagement.DTOs.Request;
+﻿using System.Security.Claims;
+using LoginSystemManagement.DTOs.Request;
 using LoginSystemManagement.IServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -46,13 +47,29 @@ namespace LoginSystemManagement.Controllers
             }
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> GetAllUsers()
         {
             var users = await _userService.GetAllUsers();
             return Ok(users);
         }
+
+        //[Authorize(Roles = "Admin")]
+        //[HttpGet]
+        //public async Task<IActionResult> GetAllUsers()
+        //{
+        //    var user = HttpContext.User;
+        //    var roles = user.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).ToList();
+
+        //    if (!roles.Contains("Admin"))
+        //    {
+        //        return Forbid(); // Debugging check
+        //    }
+
+        //    var users = await _userService.GetAllUsers();
+        //    return Ok(users);
+        //}
 
 
     }

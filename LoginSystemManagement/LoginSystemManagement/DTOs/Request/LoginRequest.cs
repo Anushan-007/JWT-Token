@@ -8,5 +8,6 @@ namespace LoginSystemManagement.DTOs.Request
         public string Name { get; set; }
         [Required]
         public string Password { get; set; }
+
     }
 }
