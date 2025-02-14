@@ -66,10 +66,11 @@ namespace LoginSystemManagement.Services
 
         public LoginResponse CreateToken(User user)
         {
-            var claimlist = new List<Claim>();
-            claimlist.Add(new Claim("Name", user.Name));
-            claimlist.Add(new Claim("Password", user.Password));
-            claimlist.Add(new Claim("UserRole", user.UserRole.ToString()));
+            var claimlist = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, user.Name),
+                new Claim(ClaimTypes.Role, user.UserRole.ToString())
+            };
 
             var Key = _configuration["Jwt:Key"];
             var secKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Key));

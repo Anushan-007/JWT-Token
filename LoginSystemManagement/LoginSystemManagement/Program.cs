@@ -74,7 +74,7 @@ builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "JWT Authentication API",
+        Title = "JWT Authentication API",               
         Version = "v1"
     });
 
